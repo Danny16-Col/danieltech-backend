@@ -8,7 +8,9 @@ const server = express();
 const PORT = process.env.PORT || 3000;
 
 // middleware
-server.use(cors());
+server.use(cors({
+  origin: '*'
+}));
 server.use(bodyParser.json());
 
 //conexion a mongo
